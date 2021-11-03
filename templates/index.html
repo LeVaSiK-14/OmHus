@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    select{
+        width: 300px;
+        height: 30px;
+    }
+    .comment, .hour, .hour1{
+        width: 300px;
+        height: 30px;
+        padding: 0;
+    }
+</style>
+<body>
+
+    
+    <p><select class="work_obj" value=''><option>WORK OBJECT</option></select></p>
+    <p><div class="works">
+        <select class="work"><option value=''>WORK</option></select>
+        <p><input type="number" name="" class="hour" placeholder="hour"></p>
+    </div></p>
+    <button class="addWorkBtn">Add work</button>
+    <p><select class="workStage"><option value = ''>WORK STAGE</option></select></p>
+    <p>isExtra: <input type="checkbox" name="" class="isExtra"></p>
+    <p><input type="text" name="" id="" class="comment" placeholder="comment"></p>
+    
+    <p class="warning"></p>
+    <p><button class="sendForm">Send form</button></p>
+    <p><button class="clear">Clear</button></p>
+    
+
+    <!-- style="visibility:hidden" -->
+    <p style="visibility:hidden" class='reqData'>{{data}}</p>
+    
+</body>
+<script src={% static "src/main.js" %} defer></script>
+
+</html>
